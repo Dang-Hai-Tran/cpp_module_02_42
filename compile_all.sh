@@ -9,8 +9,8 @@ NC='\033[0m' # Reset color escape sequence
 workDir=.
 for dir in "$workDir"/*; do
     if [ -d "$dir" ]; then
-        printf "${GREEN}Fclean in $dir\n${NC}"
-        make all -C $dir
+        printf "${GREEN}Make in $dir\n${NC}"
+        make -C $dir
     fi
 done
 printf "${GREEN}Compile all done.\n${NC}"

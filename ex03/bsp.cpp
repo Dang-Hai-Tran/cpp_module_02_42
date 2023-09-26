@@ -6,7 +6,7 @@
 /*   By: datran <datran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/25 15:15:24 by datran            #+#    #+#             */
-/*   Updated: 2023/09/26 10:52:49 by datran           ###   ########.fr       */
+/*   Updated: 2023/09/26 13:07:00 by datran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,6 @@ bool bsp(Point const a, Point const b, Point const c, Point const point) {
     Fixed areaAPB = areaTriangle(a, point, b);
     Fixed areaBPC = areaTriangle(b, point, c);
     Fixed areaCPA = areaTriangle(c, point, a);
-    return (areaABC == areaAPB + areaBPC + areaCPA);
+    return (areaAPB != 0 && areaBPC != 0 && areaCPA != 0 &&
+            areaABC == areaAPB + areaBPC + areaCPA);
 }
